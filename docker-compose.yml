@@ -1,0 +1,12 @@
+version: '3'
+services:
+ urlshortner:
+   image: "007aniketkumar/tinyurlservice"
+   ports:
+    - "8050:8050"
+   links:
+     - redis
+ redis:
+   image: "redis"
+   ports:
+    - "6379:6379"
